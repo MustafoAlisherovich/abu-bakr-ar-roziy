@@ -11,6 +11,7 @@ import useTranslate from '@/hooks/use-translate'
 import { IDoctors } from '@/types'
 import Image from 'next/image'
 import { FC } from 'react'
+import CustomImage from './shared/custom-image'
 
 interface Props {
 	doctors: IDoctors[]
@@ -28,12 +29,10 @@ const Doctor: FC<Props> = ({ doctors }) => {
 				{doctors.length === 1 ? (
 					<div className='flex justify-center'>
 						<div className='w-full max-w-sm flex flex-col items-center gap-4 p-6 rounded-xl shadow-sm transition hover:shadow-md'>
-							<Image
+							<CustomImage
 								src={doctors[0].image.url}
 								alt={doctors[0].name}
-								width={200}
-								height={200}
-								className='w-40 h-40 rounded-full object-cover border-4 border-white shadow-md'
+								className='rounded-full  border-4 border-white shadow-md'
 							/>
 							<div className='text-center'>
 								<p className='text-lg font-semibold text-gray-800'>

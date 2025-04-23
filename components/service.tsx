@@ -30,7 +30,7 @@ const Service = ({ services }: Props) => {
 									<div className='bg-teal-50 p-5 rounded-full mb-6'>
 										<img
 											src={service.icon.url}
-											alt={`${service.title} icon`}
+											alt={`${service.title}`}
 											width={56}
 											height={56}
 											className='object-contain'
