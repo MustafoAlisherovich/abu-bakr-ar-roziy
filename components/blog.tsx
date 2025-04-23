@@ -7,6 +7,7 @@ import { format } from 'date-fns'
 import { CalendarDays, Clock, Minus } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
 interface Props {
 	blogs: IBlog[]
@@ -14,6 +15,7 @@ interface Props {
 
 const Blog = ({ blogs }: Props) => {
 	const t = useTranslate()
+	const { lng } = useParams() as { lng?: string }
 
 	return (
 		<section id='blogs' className='py-12'>
@@ -23,8 +25,8 @@ const Blog = ({ blogs }: Props) => {
 				</h2>
 				<div className='grid grid-cols-2 max-md:grid-cols-1 gap-x-4 gap-y-24'>
 					{blogs.map((blog, index) => (
-						<Link href={`/blog/${blog.slug}`} key={index}>
-							<div className='relative bg-secondary rounded-md'>
+						<Link href={`/${lng}/blog/${blog.slug}`} key={index}>
+							<div className='relative bg-secondary rounded-md group cursor-pointer'>
 								<Image
 									width={650}
 									height={335}

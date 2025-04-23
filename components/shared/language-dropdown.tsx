@@ -43,7 +43,7 @@ const LanguageDropdown = ({ isMobile = false }: Props) => {
 							)}
 						>
 							<Image
-								src={`/locales/${item.route}.png`}
+								src={`/assets/locales/${item.route}.png`}
 								alt={item.label}
 								width={30}
 								height={30}

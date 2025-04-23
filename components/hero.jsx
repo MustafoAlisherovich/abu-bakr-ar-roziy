@@ -11,7 +11,7 @@ const HeroPage = () => {
 		<section
 			id='home'
 			className='relative bg-cover bg-center bg-no-repeat h-[80vh] md:h-[85vh] lg:h-screen flex items-center justify-center pt-20' //  pt-20 o'zgarish
-			style={{ backgroundImage: "url('/assets/images/img1.jpg')" }}
+			style={{ backgroundImage: "url('/assets/images/img1.JPG')" }}
 		>
 			{/* Optional overlay */}
 			<div className='absolute inset-0 bg-opacity-30'></div>

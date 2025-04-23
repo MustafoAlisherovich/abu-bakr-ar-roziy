@@ -5,6 +5,7 @@
 import useTranslate from '@/hooks/use-translate'
 import { IService } from '@/types'
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 import { Card, CardHeader, CardTitle } from './ui/card'
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
 
 const Service = ({ services }: Props) => {
 	const t = useTranslate()
+	const { lng } = useParams() as { lng?: string }
 
 	return (
 		<section id='services' className='py-12 px-4 bg-white'>
@@ -22,7 +24,7 @@ const Service = ({ services }: Props) => {
 				</h2>
 				<div className='flex flex-wrap justify-center gap-8'>
 					{services.map((service, index) => (
-						<Link key={index} href={`/service/${service.slug}`}>
+						<Link key={index} href={`/${lng}/service/${service.slug}`}>
 							<Card className='group w-64 h-60 border border-gray-200 rounded-3xl p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl hover:scale-[1.03] cursor-pointer'>
 								{service.icon && (
 									<div className='bg-teal-50 p-5 rounded-full mb-6'>

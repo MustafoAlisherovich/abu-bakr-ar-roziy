@@ -27,7 +27,7 @@ const About = () => {
 					{/* Image */}
 					<div className='w-full lg:w-1/2'>
 						<Image
-							src='/assets/images/img2.jpg'
+							src='/assets/images/img2.JPG'
 							alt='Med Servis binosi'
 							className='rounded-xl shadow-md w-full h-auto object-cover'
 							width={600}
@@ -44,7 +44,7 @@ const About = () => {
 					{/* Image */}
 					<div className='w-full lg:w-1/2'>
 						<Image
-							src='/assets/images/img3.jpg'
+							src='/assets/images/img3.JPG'
 							alt='Med Servis binosi'
 							className='rounded-xl shadow-md w-full h-auto object-cover'
 							width={600}
