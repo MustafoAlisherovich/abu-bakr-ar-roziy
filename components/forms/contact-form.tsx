@@ -118,6 +118,7 @@ const ContactForm = () => {
 						)}
 					/>
 					<Button
+						aria-label='submit'
 						className='w-fit mt-4 cursor-pointer'
 						size={'lg'}
 						type='submit'

@@ -32,6 +32,8 @@ const Contact = () => {
 										loading='lazy'
 										className='w-full h-full rounded-md shadow-lg border-0'
 										allowFullScreen
+										aria-label='clinic map'
+										title='Klinika xaritasi'
 									>
 										Map
 									</iframe>

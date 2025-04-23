@@ -52,27 +52,28 @@ const Mobile = () => {
 				</SheetHeader>
 				<div className='mt-4 flex flex-col space-y-3'>
 					{navlinks.map(nav => (
-						<button
+						<Button
+							aria-label='navlinks'
 							key={nav.href}
 							onClick={() => handleNavClick(`${t(nav.href)}`)}
 							className='flex h-12 cursor-pointer items-center gap-2 rounded-sm px-3 transition-colors hover:bg-primary-foreground text-left'
 						>
 							{t(nav.name)}
-						</button>
+						</Button>
 					))}
 					<LanguageDropdown isMobile />
 					<div className='flex items-center justify-center gap-4'>
-						<Button size='icon' variant='ghost'>
+						<Button size='icon' variant='ghost' aria-label='phone-number'>
 							<a href='tel:+998901234567'>
 								<Phone />
 							</a>
 						</Button>
-						<Button size='icon' variant='ghost'>
+						<Button size='icon' variant='ghost' aria-label='instagram'>
 							<a href='https://www.instagram.com/ar.roziy_clinic'>
 								<InstagramIcon />
 							</a>
 						</Button>
-						<Button size='icon' variant='ghost'>
+						<Button size='icon' variant='ghost' aria-label='facebook'>
 							<a href='https://www.facebook.com/arroziy.clinic'>
 								<FacebookIcon />
 							</a>

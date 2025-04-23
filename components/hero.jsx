@@ -28,8 +28,9 @@ const HeroPage = () => {
 				<div className='flex justify-center mt-6'>
 					<Link href={'#blogs'}>
 						<Button
+							aria-label='bizning bloglar'
 							size='lg'
-							className='font-semibold shadow hover:shadow-lg bg-primary hover:bg-primary/90 transition'
+							className='font-semibold shadow-lg rounded-xl bg-gradient-to-r from-green-500 via-green-600 to-green-700  text-white hover:shadow-xl hover:from-green-600 hover:via-green-700 hover:to-green-800 transition transform hover:-translate-y-0. active:translate-y-0 px-6 py-3'
 						>
 							{t('ourBlogs')}
 						</Button>

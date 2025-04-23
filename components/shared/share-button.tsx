@@ -32,6 +32,7 @@ export default function ShareButtons({ slug, title }: Props) {
 	return (
 		<>
 			<Button
+				aria-label='twitter'
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.twitter, '_blank')}
@@ -39,6 +40,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				<Twitter />
 			</Button>
 			<Button
+				aria-label='facebook'
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.facebook, '_blank')}
@@ -46,6 +48,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				<Facebook />
 			</Button>
 			<Button
+				aria-label='linkedin'
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.linkedin, '_blank')}
@@ -53,6 +56,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				<Linkedin />
 			</Button>
 			<Button
+				aria-label='copy'
 				size='icon'
 				variant='outline'
 				onClick={() => {

@@ -45,6 +45,7 @@ const Footer = () => {
 									<PhoneCall size={20} />
 									<div className='flex flex-col space-y-1'>
 										<a
+											aria-label='phone'
 											className='text-sm hover:text-primary hover:underline'
 											href='tel:+998994070301'
 										>
@@ -52,6 +53,7 @@ const Footer = () => {
 										</a>
 										<Separator className='bg-gray-500' />
 										<a
+											aria-label='phone'
 											href='tel:+998954020301'
 											className='text-sm hover:text-primary hover:underline'
 										>
@@ -59,6 +61,7 @@ const Footer = () => {
 										</a>
 										<Separator className='bg-gray-500' />
 										<a
+											aria-label='phone'
 											href='tel:+998906280301'
 											className='text-sm hover:text-primary hover:underline'
 										>
@@ -70,6 +73,7 @@ const Footer = () => {
 								<div className='flex items-center space-x-3'>
 									<Mail size={20} />
 									<a
+										aria-label='mail'
 										className='text-sm hover:text-primary hover:underline'
 										href='mailto:abubakr.arroziy.clinic@gmail.com'
 									>
@@ -78,7 +82,7 @@ const Footer = () => {
 								</div>
 								<div className='flex items-center space-x-3'>
 									<MapPin size={20} />
-									<span className='text-sm'>
+									<span className='text-sm' aria-label='manzil'>
 										Qoʻqon, Chodaklik aholi punkti, 1
 									</span>
 								</div>

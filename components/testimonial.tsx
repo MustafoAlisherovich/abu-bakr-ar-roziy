@@ -66,6 +66,7 @@ const Testimonial = ({ testimonials }: Props) => {
 				{/* Navigation Buttons */}
 				<div className='flex justify-center gap-4 mt-6'>
 					<Button
+						aria-label='prev'
 						variant='ghost'
 						size='icon'
 						onClick={prev}
@@ -74,6 +75,7 @@ const Testimonial = ({ testimonials }: Props) => {
 						<ChevronLeft className='w-5 h-5' />
 					</Button>
 					<Button
+						aria-label='next'
 						variant='ghost'
 						size='icon'
 						onClick={next}
