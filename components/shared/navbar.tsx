@@ -37,19 +37,25 @@ const Navbar = () => {
 					{/* Right Side (socials + lang) */}
 					<div className='hidden md:flex items-center space-x-4'>
 						<LanguageDropdown />
-						<Button size='icon' variant='ghost'>
-							<a href='tel:+998994070301'>
-								<Phone />
+						<Button size='icon' variant='ghost' aria-label='phone'>
+							<a href='tel:+998994070301' aria-label='+998994070301'>
+								<span>
+									<Phone />
+								</span>
 							</a>
 						</Button>
-						<Button size='icon' variant='ghost'>
+						<Button size='icon' variant='ghost' aria-label='instagram'>
 							<a href='https://www.instagram.com/ar.roziy_clinic'>
-								<InstagramIcon />
+								<span>
+									<InstagramIcon />
+								</span>
 							</a>
 						</Button>
-						<Button size='icon' variant='ghost'>
+						<Button size='icon' variant='ghost' aria-label='facebook'>
 							<a href='https://www.facebook.com/arroziy.clinic'>
-								<FacebookIcon />
+								<span>
+									<FacebookIcon />
+								</span>
 							</a>
 						</Button>
 					</div>

@@ -32,7 +32,9 @@ const Contact = () => {
 										loading='lazy'
 										className='w-full h-full rounded-md shadow-lg border-0'
 										allowFullScreen
-									></iframe>
+									>
+										Map
+									</iframe>
 								</div>
 							</div>
 						</div>

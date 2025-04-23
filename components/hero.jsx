@@ -29,7 +29,7 @@ const HeroPage = () => {
 					<Link href={'#blogs'}>
 						<Button
 							size='lg'
-							className='font-semibold shadow hover:shadow-lg bg-primary text-white hover:bg-primary/90 transition'
+							className='font-semibold shadow hover:shadow-lg bg-primary hover:bg-primary/90 transition'
 						>
 							{t('ourBlogs')}
 						</Button>

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 	description:
 		"Ar-Roziy Klinika Qo'qonda yuqori sifatli diagnostika va davolash xizmatlarini taqdim etadi. Mutaxassis shifokorlar, zamonaviy uskunalar, va yuqori darajadagi xizmatlar bilan sog‘lig‘ingizni kafolatlaymiz.",
 	authors: [{ name: 'Ar-Roziy Klinika', url: 'https://ar-roziy.uz' }],
-	icons: { icon: '/logo/headLogo.svg' },
+	icons: { icon: '/assets/logo/headLogo.svg' },
 	openGraph: {
 		title: "Ar-Roziy Klinika - Qo'qondagi zamonaviy tibbiy markaz",
 		description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 		type: 'website',
 		url: 'https://ar-roziy.uz',
 		locale: 'uz_UZ',
-		images: '/assets/img4.JPG',
+		images: '/assets/images/img4.JPG',
 		countryName: 'Uzbekistan',
 		siteName: 'Ar-Roziy',
 		emails: 'abubakr.arroziy.clinic@gmail.com',
