@@ -11,6 +11,10 @@ import { getServices } from '@/service/services.service'
 import { getTestimonials } from '@/service/testimonial.service'
 import { LngParams } from '@/types'
 
+export const revalidate = 60
+
+export const dynamic = 'force-dynamic'
+
 async function Page({ params }: LngParams) {
 	const { lng } = params
 	const services = await getServices(lng)
