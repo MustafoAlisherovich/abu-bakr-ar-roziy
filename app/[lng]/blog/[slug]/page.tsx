@@ -75,6 +75,7 @@ export default async function BlogSlugPage({ params }: PageProps) {
 				width={1120}
 				height={595}
 				className='mt-4 rounded-md w-full h-auto object-cover'
+				loading='eager'
 			/>
 
 			<div className='flex flex-col-reverse md:flex-row md:gap-12 mt-12 relative'>

@@ -53,6 +53,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
 				width={800}
 				height={400}
 				className='rounded-xl mb-6 w-full h-auto object-cover'
+				loading='eager'
 			/>
 
 			<div
