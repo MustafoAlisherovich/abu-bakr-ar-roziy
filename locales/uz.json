@@ -23,5 +23,7 @@
 	"about2Description": "Abu Bakr ar-Raziy Med Services yurak salomatligini tiklash va uni qo‘llab-quvvatlashda yetakchilik qiladi. Klinikamizda yurak operatsiyalari, stenting va koronografiya kabi xizmatlar yuqori aniqlikka ega zamonaviy uskunalar yordamida amalga oshiriladi. Philips Azurion 3M15 angiografiyasi orqali yurakdagi muammolarni aniq va o‘z vaqtida aniqlash imkoniyati mavjud.",
 	"testimonials": "Mijozlar fikrlari",
 	"read": "min o'qish",
-	"share": "Ulashish"
+	"share": "Ulashish",
+	"copy": "Link nusxalandi!",
+	"copyError": "Nusxalashda xatolik yuz berdi!"
 }

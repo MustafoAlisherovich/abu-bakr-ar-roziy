@@ -1,8 +1,10 @@
 // components/ShareButtons.tsx
 'use client'
+
 import { Button } from '@/components/ui/button'
+import useTranslate from '@/hooks/use-translate'
 import { Facebook, Link2, Linkedin, Twitter } from 'lucide-react'
-import { useParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 
 interface Props {
@@ -12,21 +14,40 @@ interface Props {
 }
 
 export default function ShareButtons({ slug, title }: Props) {
-	const { lng } = useParams() as { lng?: string }
+	const t = useTranslate()
+	const [fullUrl, setFullUrl] = useState('')
+	const [shareUrl, setShareUrl] = useState({
+		twitter: '',
+		facebook: '',
+		linkedin: '',
+	})
 
-	const origin =
-		typeof window !== 'undefined'
-			? window.location.origin
-			: 'https://ar-roziy.uz'
-	const path = lng ? `/${lng}/${slug}` : `/${slug}`
-	const fullUrl = `${origin}${path}`
-	const encodedUrl = encodeURIComponent(fullUrl)
-	const encodedTitle = encodeURIComponent(title)
+	useEffect(() => {
+		const origin = typeof window !== 'undefined' ? window.location.origin : ''
+		const url = `${origin}/blog/${slug}`
 
-	const shareUrl = {
-		twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-		facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-		linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+		const encodedUrl = encodeURIComponent(url)
+		const encodedTitle = encodeURIComponent(title)
+
+		setFullUrl(url)
+		setShareUrl({
+			twitter: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+			facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+			linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+		})
+	}, [slug, title])
+
+	const handleCopy = async () => {
+		if (!fullUrl) {
+			toast.error('Hali link tayyor emas, biroz kuting')
+			return
+		}
+		try {
+			await navigator.clipboard.writeText(fullUrl)
+			toast.success(t('copy'))
+		} catch {
+			toast.error(t('copyError'))
+		}
 	}
 
 	return (
@@ -36,6 +57,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.twitter, '_blank')}
+				disabled={!shareUrl.twitter}
 			>
 				<Twitter />
 			</Button>
@@ -44,6 +66,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.facebook, '_blank')}
+				disabled={!shareUrl.facebook}
 			>
 				<Facebook />
 			</Button>
@@ -52,6 +75,7 @@ export default function ShareButtons({ slug, title }: Props) {
 				size='icon'
 				variant='outline'
 				onClick={() => window.open(shareUrl.linkedin, '_blank')}
+				disabled={!shareUrl.linkedin}
 			>
 				<Linkedin />
 			</Button>
@@ -59,10 +83,8 @@ export default function ShareButtons({ slug, title }: Props) {
 				aria-label='copy'
 				size='icon'
 				variant='outline'
-				onClick={() => {
-					navigator.clipboard.writeText(fullUrl)
-					toast.success('Link nusxalandi')
-				}}
+				onClick={handleCopy}
+				disabled={!fullUrl}
 			>
 				<Link2 />
 			</Button>

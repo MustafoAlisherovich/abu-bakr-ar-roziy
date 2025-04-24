@@ -1,5 +1,3 @@
-import Footer from '@/components/shared/footer'
-import Navbar from '@/components/shared/navbar'
 import { languages } from '@/i18n/settings'
 import { ChildProps } from '@/types'
 import { dir } from 'i18next'
@@ -57,9 +55,8 @@ export default function RootLayout({ children, params: { lng } }: Props) {
 	return (
 		<html lang={lng} dir={dir(lng)}>
 			<body className={`${poppins.variable} ${inter.variable} antialiased`}>
-				<Navbar />
 				{children}
-				<Footer />
+
 				<Toaster position={'top-center'} />
 			</body>
 		</html>
