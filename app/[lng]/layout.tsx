@@ -1,3 +1,4 @@
+import Footer from '@/components/shared/footer'
 import Navbar from '@/components/shared/navbar'
 import { languages } from '@/i18n/settings'
 import { ChildProps } from '@/types'
@@ -22,6 +23,8 @@ const inter = Inter({
 export async function generateStaticParams() {
 	return languages.map(lng => ({ lng }))
 }
+
+export const dynamicParams = false
 
 export const metadata: Metadata = {
 	metadataBase: new URL('https://ar-roziy.uz'),
@@ -56,6 +59,7 @@ export default function RootLayout({ children, params: { lng } }: Props) {
 			<body className={`${poppins.variable} ${inter.variable} antialiased`}>
 				<Navbar />
 				{children}
+				<Footer />
 				<Toaster position={'top-center'} />
 			</body>
 		</html>

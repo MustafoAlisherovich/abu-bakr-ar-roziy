@@ -6,25 +6,23 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
 
 export const getServices = async (locale: string) => {
 	const query = gql`
-		query GetServices($locales: [Locale!]!) {
-			services(locales: $locales) {
-				slug
+		query GetServices($locale: [Locale!]!) {
+			services(locales: $locale) {
 				title
 				icon {
 					url
 				}
+				slug
 			}
 		}
 	`
 
-	const variables = {
-		locales: [locale],
-	}
-
 	const { services } = await request<{ services: IService[] }>(
 		graphqlAPI,
 		query,
-		variables
+		{
+			locale: [locale, 'uz'],
+		}
 	)
 
 	return services
@@ -33,15 +31,15 @@ export const getServices = async (locale: string) => {
 export const getDetailedService = cache(
 	async (slug: string, locale: string) => {
 		const query = gql`
-			query GetDetailedService($slug: String!, $locales: [Locale!]!) {
-				service(locales: $locales, where: { slug: $slug }) {
+			query GetDetailedService($slug: String!, $locale: [Locale!]!) {
+				service(locales: $locale, where: { slug: $slug }) {
 					content {
 						html
 					}
-					title
 					image {
 						url
 					}
+					title
 				}
 			}
 		`
@@ -50,8 +48,8 @@ export const getDetailedService = cache(
 			graphqlAPI,
 			query,
 			{
-				slug, // asl slug
-				locales: [locale, 'uz'], // til kodi massivda
+				slug,
+				locale: [locale, 'uz'],
 			}
 		)
 

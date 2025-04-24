@@ -87,7 +87,7 @@ const ContactForm = () => {
 						name='phone'
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel className='mt-4 text-gray-700 text-lg leading-relaxed'>
+								<FormLabel className=' text-gray-700 text-lg leading-relaxed'>
 									{t('phone')}
 								</FormLabel>
 								<FormControl>
