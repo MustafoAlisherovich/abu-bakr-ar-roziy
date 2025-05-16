@@ -19,6 +19,8 @@ interface PageProps {
 	}
 }
 
+const baseUrl = 'https://ar-roziy.uz'
+
 // Generate metadata
 export async function generateMetadata({
 	params,
@@ -34,7 +36,9 @@ export async function generateMetadata({
 		title: blog.title,
 		description: blog.description,
 		openGraph: {
-			images: blog.image.url,
+			images: blog.image?.url
+				? `${baseUrl}${blog.image.url}`
+				: `${baseUrl}/assets/images/img4.JPG`,
 			title: blog.title,
 			description: blog.description,
 		},
@@ -75,7 +79,7 @@ export default async function BlogSlugPage({ params }: PageProps) {
 				width={1120}
 				height={595}
 				className='mt-4 rounded-md w-full h-auto object-cover'
-				loading='eager'
+				loading='lazy'
 			/>
 
 			<div className='flex flex-col-reverse md:flex-row md:gap-12 mt-12 relative'>

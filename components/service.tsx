@@ -34,6 +34,7 @@ const Service = ({ services }: Props) => {
 											width={56}
 											height={56}
 											className='object-contain'
+											loading='lazy'
 										/>
 									</div>
 								)}

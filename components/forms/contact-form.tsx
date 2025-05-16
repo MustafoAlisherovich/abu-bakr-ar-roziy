@@ -68,7 +68,7 @@ const ContactForm = () => {
 						name='name'
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel className='mt-4 text-gray-700 text-lg leading-relaxed'>
+								<FormLabel className='text-gray-700 text-lg leading-relaxed'>
 									{t('name')}
 								</FormLabel>
 								<FormControl>
@@ -102,7 +102,7 @@ const ContactForm = () => {
 						name='message'
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel className='mt-6 text-gray-700 text-lg leading-relaxed'>
+								<FormLabel className='text-gray-700 text-lg leading-relaxed'>
 									{t('message')}
 								</FormLabel>
 								<FormControl>

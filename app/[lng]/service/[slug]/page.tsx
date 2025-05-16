@@ -1,5 +1,3 @@
-// app/[lng]/services/[slug]/page.tsx
-
 import { getDetailedService } from '@/service/services.service'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -11,6 +9,8 @@ interface PageProps {
 		slug: string
 	}
 }
+
+const baseUrl = 'https://ar-roziy.uz'
 
 // SEO metadata
 export async function generateMetadata({
@@ -26,7 +26,9 @@ export async function generateMetadata({
 	return {
 		title: service.title,
 		openGraph: {
-			images: service.image.url,
+			images: service.image?.url
+				? `${baseUrl}${service.image.url}`
+				: `${baseUrl}/assets/images/img4.JPG`,
 			title: service.title,
 		},
 	}
@@ -53,7 +55,7 @@ export default async function ServiceSlugPage({ params }: PageProps) {
 				width={800}
 				height={400}
 				className='rounded-xl mb-6 w-full h-auto object-cover'
-				loading='eager'
+				loading='lazy'
 			/>
 
 			<div

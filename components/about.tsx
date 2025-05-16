@@ -32,7 +32,7 @@ const About = () => {
 							className='rounded-xl shadow-md w-full h-auto object-cover'
 							width={600}
 							height={400}
-							priority
+							loading='lazy'
 						/>
 					</div>
 				</div>
@@ -49,6 +49,7 @@ const About = () => {
 							className='rounded-xl shadow-md w-full h-auto object-cover'
 							width={600}
 							height={400}
+							loading='lazy'
 						/>
 					</div>
 

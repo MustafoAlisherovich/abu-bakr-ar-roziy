@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 		type: 'website',
 		url: 'https://ar-roziy.uz',
 		locale: 'uz_UZ',
-		images: '/assets/images/img4.JPG',
+		images: 'https://www.ar-roziy.uz/assets/images/img4.JPG',
 		countryName: 'Uzbekistan',
 		siteName: 'Ar-Roziy',
 		emails: 'abubakr.arroziy.clinic@gmail.com',
@@ -46,7 +46,6 @@ export const metadata: Metadata = {
 	keywords:
 		"Klinika, tibbiyot, shifokor, diagnostika, davolash, Qo'qon klinikalar, sog'liqni saqlash, zamonaviy tibbiyot tibbiy xizmatlar, shifokorlar, konsultatsiya, maxsus tibbiy yordam, sog'liq markazi, ar roziy, ar-roziy abu bakr ar roziy, jarrohlik, qo'qondagi eng yaxshi klinika, to'liq davolanish, Клиника, тиббиёт, шифокор, диагностика, даволаш, Қўқон клиникалари, соғлиқни сақлаш, замонавий тиббиёт, тиббий хизматлар, шифокорлар, консультация, махсус тиббий ёрдам, соғлиқ маркази, Ар Розий, Ар-Розий Абу Бакр ар-Розий, жарроҳлик, Қўқондаги энг яхши клиника, тўлиқ даволаниш Клиника, медицина, врач, диагностика, лечение, клиники Коканда, здравоохранение, современная медицина, медицинские услуги, врачи, консультация, специальная медицинская помощь, центр здоровья, Ар-Рази, Ар-Рази Абу Бакр ар-Рази, хирургия, лучшая клиника в Коканде, полное лечение",
 }
-
 interface Props extends ChildProps {
 	params: { lng: string }
 }

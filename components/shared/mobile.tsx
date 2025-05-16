@@ -56,7 +56,7 @@ const Mobile = () => {
 							aria-label='navlinks'
 							key={nav.href}
 							onClick={() => handleNavClick(`${t(nav.href)}`)}
-							className='flex h-12 cursor-pointer items-center gap-2 rounded-sm px-3 transition-colors hover:bg-primary-foreground text-left'
+							className='flex h-12 cursor-pointer items-center gap-2 rounded-sm px-3 transition-colors hover:bg-primary-foreground text-left hover:text-primary'
 						>
 							{t(nav.name)}
 						</Button>

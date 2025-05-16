@@ -32,6 +32,7 @@ const Blog = ({ blogs }: Props) => {
 									height={335}
 									src={blog.image.url}
 									alt={blog.title}
+									loading='lazy'
 									className='rounded-md w-full h-[335px] object-cover transition-transform duration-300 group-hover:-translate-y-2'
 								/>
 							</div>

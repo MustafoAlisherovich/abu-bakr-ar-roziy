@@ -41,6 +41,7 @@ const Testimonial = ({ testimonials }: Props) => {
 								alt={testimonial.name}
 								width={120}
 								height={120}
+								loading='lazy'
 								className='rounded-2xl object-cover shadow-lg border border-muted'
 							/>
 						) : (
